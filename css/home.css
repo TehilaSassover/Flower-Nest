@@ -1,0 +1,93 @@
+/* === Slider === */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 70px; /* space for fixed navbar */
+}
+
+.slides {
+  display: flex;
+  width: 400%; /* 4 slides */
+  animation: slide 16s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slide h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+/* Slider animation */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+/* === Info Box === */
+.info-box {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.info-box .box {
+  background: #f0f0f0;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  transition: transform 0.3s;
+}
+
+.info-box .box:hover {
+  transform: scale(1.05);
+}
+
+.info-box h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* === Side Banners === */
+.side-banner {
+  position: fixed;
+  top: 150px;
+  width: 200px;
+  padding: 15px;
+  background: #f39c12;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.side-banner.left {
+  left: 10px;
+}
+
+.side-banner.right {
+  right: 10px;
+}
