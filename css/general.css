@@ -87,3 +87,82 @@ footer .socials a {
 footer .socials a:hover {
     color: #E79D9D;
 }
+
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Style the hamburger button */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+/* Default nav for desktop */
+nav ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
+        margin-left: auto;
+        /* push hamburger to right */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        /* directly under header */
+        right: 15px;
+        padding: 10px 0;
+        width: 200px;
+        text-align: right;
+        animation: dropdown 0.3s ease;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        transition: background 0.2s ease;
+    }
+
+    nav ul li a:hover {
+        border-radius: 4px;
+    }
+
+    /* Show menu when checked */
+    #menu-toggle:checked+.hamburger+nav ul {
+        display: flex;
+    }
+
+    /* Animation */
+    @keyframes dropdown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

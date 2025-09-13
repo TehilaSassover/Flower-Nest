@@ -17,6 +17,9 @@
         <div class="logo">
             <img src="../images/logo.png" alt="Logo">
         </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -27,6 +30,7 @@
             </ul>
         </nav>
     </header>
+
 
     <!-- Full-screen Slider -->
     <section class="slider">
@@ -54,9 +58,7 @@
     </section>
 
     <!-- Info box -->
-    <!-- Info box and banners moved below the slider -->
     <main>
-        <!-- Info box with image -->
         <section class="info-container" data-aos="fade-up">
             <section class="info-container" data-aos="fade-up">
                 <!-- Left info box -->
@@ -144,7 +146,7 @@
         setInterval(() => {
             current = (current === slides.length - 1) ? 0 : current + 1;
             showSlide(current);
-        }, 5000);
+        }, 3000);
     </script>
     <script>
         // Initialize AOS
