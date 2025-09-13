@@ -1,90 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Home - My Website</title>
-  <link rel="stylesheet" href="../css/general.css">
-  <link rel="stylesheet" href="../css/home.css"> <!-- page-specific styles -->
+    <meta charset="UTF-8">
+    <title>Home - My Website</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/home.css">
 
-  <!-- AOS library -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Shared header -->
-  <header>
-    <div class="logo">My Logo</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Shared header -->
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Slider -->
-  <section class="slider">
-    <div class="slides">
-      <div class="slide">
-        <img src="../images/slide1.jpg" alt="Slide 1">
-        <h2>Fresh Flowers Every Day</h2>
-      </div>
-      <div class="slide">
-        <img src="../images/slide2.jpg" alt="Slide 2">
-        <h2>Beautiful Bouquets</h2>
-      </div>
-      <div class="slide">
-        <img src="../images/slide3.jpg" alt="Slide 3">
-        <h2>Seasonal Specials</h2>
-      </div>
-      <div class="slide">
-        <img src="../images/slide4.jpg" alt="Slide 4">
-        <h2>Weddings & Events</h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- Page content -->
-  <main>
-    <h1>Welcome to the Home Page</h1>
-    <p>This is the home page of the website.</p>
+    <!-- Full-screen Slider -->
+    <section class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="../images/slide1.jpg" alt="Slide 1">
+                <h2>Fresh Flowers Every Day</h2>
+            </div>
+            <div class="slide">
+                <img src="../images/slide2.jpg" alt="Slide 2">
+                <h2>Beautiful Bouquets</h2>
+            </div>
+            <div class="slide">
+                <img src="../images/slide3.jpg" alt="Slide 3">
+                <h2>Seasonal Specials</h2>
+            </div>
+            <div class="slide">
+                <img src="../images/slide4.jpg" alt="Slide 4">
+                <h2>Weddings & Events</h2>
+            </div>
+        </div>
+        <!-- Arrows -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
 
     <!-- Info box -->
-    <section class="info-box">
-      <a href="about.html">
-        <div class="box">
-          <h2>Learn About Our Story</h2>
-          <p>Click here to discover more about our flower shop and journey.</p>
+    <!-- Info box and banners moved below the slider -->
+    <main>
+        <!-- Info box with image -->
+        <section class="info-container" data-aos="fade-up">
+            <section class="info-container" data-aos="fade-up">
+                <!-- Left info box -->
+                <a href="https://en.wikipedia.org/wiki/Floristry" target="_blank">
+                    <div class="box">
+                        <h2>Floristry Techniques</h2>
+                        <img src="../images/floristry.jpg" alt="Floristry" class="info-img">
+                        <p>Learn more about the art and techniques of flower arranging.</p>
+                    </div>
+                </a>
+
+                <!-- Center info box -->
+                <a href="about.html">
+                    <div class="box">
+                        <h2>Learn About Our Story</h2>
+                        <img src="../images/flowerShop.jpg" alt="Our Shop" class="info-img">
+                        <p>Click here to discover more about our flower shop and journey.</p>
+                    </div>
+                </a>
+
+                <!-- Right info box -->
+                <a href="https://en.wikipedia.org/wiki/Floral_design" target="_blank">
+                    <div class="box">
+                        <h2>Floral Design</h2>
+                        <img src="../images/floralDesign.jpg" alt="Floral Design" class="info-img">
+                        <p>Explore floral design concepts and popular arrangements.</p>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Side banners -->
+            <section class="banners">
+                <div class="side-banner left" data-aos="fade-right">
+                    <p>🌸 Special Sale – 20% off bouquets this week!</p>
+                    <a href="shop.html" class="banner-link">Shop Now</a>
+                </div>
+                <div class="side-banner right" data-aos="fade-left">
+                    <p>💌 Subscribe to our newsletter for floral tips!</p>
+                    <a href="subscribe.html" class="banner-link">Subscribe</a>
+                </div>
+            </section>
+    </main>
+
+
+
+
+    <!-- Shared footer -->
+    <footer>
+        <p>Created by Tehila Goldberg © 2025</p>
+        <div class="socials">
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">YouTube</a>
         </div>
-      </a>
-    </section>
-  </main>
+    </footer>
 
-  <!-- Side banners -->
-  <aside class="side-banner left" data-aos="fade-right">
-    <p>🌸 Special Sale – 20% off bouquets this week!</p>
-  </aside>
-  <aside class="side-banner right" data-aos="fade-left">
-    <p>💌 Subscribe to our newsletter for floral tips!</p>
-  </aside>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let current = 0;
 
-  <!-- Shared footer -->
-  <footer>
-    <p>Created by Your Name © 2025</p>
-    <div class="socials">
-      <a href="#">LinkedIn</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">YouTube</a>
-    </div>
-  </footer>
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+        // Arrow navigation
+        prev.addEventListener('click', () => {
+            current = (current === 0) ? slides.length - 1 : current - 1;
+            showSlide(current);
+        });
+
+        next.addEventListener('click', () => {
+            current = (current === slides.length - 1) ? 0 : current + 1;
+            showSlide(current);
+        });
+
+        // Automatic slide every 5 seconds
+        setInterval(() => {
+            current = (current === slides.length - 1) ? 0 : current + 1;
+            showSlide(current);
+        }, 5000);
+    </script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
 </body>
+
 </html>

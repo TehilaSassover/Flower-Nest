@@ -1,16 +1,23 @@
+/* Reset and body setup */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* full viewport height */
 }
 
+/* Header styling */
 header {
     background: #333;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding-left: 15px;
+    padding-right: 30px;
 
     position: fixed;
     top: 0;
@@ -21,12 +28,15 @@ header {
     overflow-x: auto;
 }
 
-
-header .logo {
-    font-size: 20px;
-    font-weight: bold;
+header .logo img {
+    height: 100px;
+    /* Adjust logo size */
+    width: auto;
+    /* Keep aspect ratio */
+    display: block;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -45,19 +55,26 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f39c12;
+    color: #E79D9D;
 }
 
+/* Main content */
 main {
-    padding: 100px 30px 30px;
+    flex: 1;
+    /* grows to push footer down if content is short */
+    padding: 120px 30px 30px;
+    /* top padding for fixed header */
     min-height: 70vh;
 }
 
+/* Footer */
 footer {
     background: #222;
     color: #ccc;
     text-align: center;
     padding: 20px;
+    flex-shrink: 0;
+    /* Prevent shrinking */
 }
 
 footer .socials a {
@@ -68,5 +85,5 @@ footer .socials a {
 }
 
 footer .socials a:hover {
-    color: #f39c12;
+    color: #E79D9D;
 }

@@ -1,0 +1,89 @@
+/* Make body full height and use flex layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main takes remaining space and centers content */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontal centering */
+  justify-content: center; /* vertical centering */
+  box-sizing: border-box;
+  padding-top: 100px; /* adjust for fixed header */
+}
+
+/* Page title */
+main h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Accordion container */
+.accordion {
+  width: 90%;
+  max-width: 700px;
+}
+
+/* Each question + answer */
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Question button */
+.accordion-btn {
+  background: #E79D9D;
+  color: white;
+  cursor: pointer;
+  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  text-align: center; /* center the question text */
+  outline: none;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: center; /* center the text horizontally */
+  align-items: center;
+}
+
+.accordion-btn::after {
+  content: '+';
+  font-size: 20px;
+  margin-left: 10px; /* space between text and + */
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn.active::after {
+  content: '−';
+}
+
+.accordion-btn:hover {
+  background: #d77c7c;
+}
+
+/* Answer content */
+.accordion-content {
+  background: #fdf2f2;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+}
+
+.accordion-content p {
+  padding: 15px 0;
+  margin: 0;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Flower Shop</title>
+  <link rel="stylesheet" href="../css/general.css"> <!-- general styles -->
+  <link rel="stylesheet" href="../css/contact.css"> <!-- page-specific styles -->
+</head>
+
+<body>
+  <!-- Shared header/navbar -->
+  <header>
+    <div class="logo">
+      <img src="../images/logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Page Content -->
+  <main>
+    <h1>Contact Us</h1>
+
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="comments" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <!-- Shared footer -->
+  <footer>
+    <p>Created by Tehila Goldberg © 2025</p>
+    <div class="socials">
+      <a href="#">LinkedIn</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const comments = document.getElementById("comments").value.trim();
+
+      // Validate fields are not empty
+      if (!name || !email || !comments) {
+        alert("All fields are required!");
+        return;
+      }
+
+      // Validate email contains @ and .
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email with @ and .");
+        return;
+      }
+
+      // Redirect to thank you page
+      window.location.href = "thankyou.html";
+    });
+  </script>
+</body>
+
+</html>

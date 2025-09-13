@@ -1,7 +1,7 @@
 /* Page title */
 main h1 {
   text-align: center;
-  margin: 100px 0 40px; /* push down below navbar */
+  margin: 40px 0 40px; /* push down below navbar */
   font-size: 28px;
 }
 
@@ -15,20 +15,39 @@ main h1 {
   gap: 30px;
 }
 
-/* Image styling */
+/* Image styling (stay fixed size, no animation) */
 .about-img {
-  width: 40%;
+  width: 30%;
   max-width: 350px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* Container for title + text */
+.about-text-container {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Section titles (above the text) */
+.section-title {
+  font-size: 22px;
+  color: #E79D9D;
+  font-weight: bold;
+  margin: 0;
+}
+
 /* Text styling */
 .about-text {
-  width: 55%;
   font-size: 16px;
   line-height: 1.6;
   color: #333;
+  margin: 0;
 }
 
 /* Responsive design for mobile */
@@ -37,7 +56,20 @@ main h1 {
     flex-direction: column;
     text-align: center;
   }
-  .about-img, .about-text {
+  .about-img, .about-text-container {
     width: 90%;
   }
+  .about-text-container {
+    align-items: center;
+  }
 }
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Stagger animation for each section */
+.about-section:nth-child(2) .about-text-container { animation-delay: 0.3s; }
+.about-section:nth-child(3) .about-text-container { animation-delay: 0.6s; }
